@@ -4,7 +4,7 @@ from acme import Product
 
 '''
 Now you can represent your inventory - let's use these classes and write an
-`acme_report.py` module to generate random products and print a summary of them.
+acme_report.py module to generate random products and print a summary of them.
 For the purposes of these functions we will only use the `Product` class.
 
 Your module should include two functions:
@@ -47,15 +47,14 @@ def generate_products(n=30):
         product_name = f'{adj_choice} {noun_choice}'
 
         # Create individual products
-        product = Product(name=product_name, 
-                          price=random.randint(5, 101), 
-                          weight=random.randint(5, 101), 
-                          flammability=random.uniform(0.0, 2.5), 
-                    )
+        product = Product(name=product_name,
+                          price=random.randint(5, 101),
+                          weight=random.randint(5, 101),
+                          flammability=random.uniform(0.0, 2.5),
+                          )
 
         # Append product to products list
         products.append(product)
-
 
     return products
 
@@ -80,7 +79,6 @@ def inventory_report(products):
     weight_average = weight_total / len(products)
     price_average = price_total / len(products)
     flammability_average = flammability_total / len(products)
-
 
     # Generate the report
     print('\nInventory Report')
